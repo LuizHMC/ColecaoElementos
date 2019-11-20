@@ -19,7 +19,10 @@ public class listaPonto {
     }
 
     public void adiciona_final(Ponto p){
-        //implement
+        if (this.pontos[this.pontos.length - 1] == null){
+         this.pontos[this.pontos.length -1] = p;
+         this.validos ++;
+        }
     }
 
     public void adiciona_posicao_especifica(Ponto p, int pos){
@@ -32,16 +35,39 @@ public class listaPonto {
     }
 
     public void remove_ponto(int indice){
-        //implement
+        for (int i = indice; i < this.pontos.length; i++){
+            if (i + 1 == this.pontos.length){
+                this.pontos[i] = null;
+            }
+            this.pontos[i] = this.pontos[i + 1];
+        }
+        this.validos --;
     }
 
     public double calcula_distancia(){
-        //implement
-        return 1;
+        double max_distancia = 0;
+        for(int i = 0; i < this.pontos.length; i++) {
+            for (int j = 0; j < this.pontos.length; j++) {
+                double nova_distancia = this.pontos[i].distancia(this.pontos[j]);
+                if ( nova_distancia > max_distancia){
+                    max_distancia = nova_distancia;
+                }
+            }
+        }
+        return max_distancia;
     }
 
     public listaPonto pontos_circunferencia(double raio, Ponto p){
-        //implement
-        return new listaPonto(1);
+        Ponto[] pontos_circunferencia_list = new Ponto[this.pontos.length];
+        for(int i = 0; i < this.pontos.length; i++){
+            if(p.distancia(this.pontos[i]) <= raio){
+                pontos_circunferencia_list[i] = this.pontos[i];
+            }
+        }
+        listaPonto nova_lista = new listaPonto(pontos_circunferencia_list.length);
+        for(int i = 0; i < pontos_circunferencia_list.length; i++){
+            nova_lista.adiciona_final(pontos_circunferencia_list[i]);
+        }
+        return nova_lista;
     }
 }

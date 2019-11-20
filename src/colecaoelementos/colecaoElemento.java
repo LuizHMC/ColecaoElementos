@@ -18,15 +18,9 @@ public class colecaoElemento {
         listaPonto l1;
         colecaoElemento colecao;
         p1 = new Ponto(1,2);
-        Ponto list[] = {p1};
-        l1 = new listaPonto(1);
 
         int escolha;
         Scanner input    = new Scanner(System.in);
-
-        System.out.print(p1+"\n");
-        System.out.print(l1.getPontos()+"\n");
-        System.out.print(list+"\n");
 
         System.out.print("--------------------------------------------\n");
         System.out.print("|");
