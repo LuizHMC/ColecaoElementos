@@ -18,8 +18,11 @@ public class colecaoElemento {
         listaPonto l1;
         colecaoElemento colecao;
         p1 = new Ponto(1,2);
-
+        int numeroposicoes;
+        int x, y;
+        listaPonto[] vetor;
         int escolha;
+
         Scanner input    = new Scanner(System.in);
 
         System.out.print("--------------------------------------------\n");
@@ -31,6 +34,10 @@ public class colecaoElemento {
         System.out.print("--------------------------------------------\n");
         System.out.print("\n");
         System.out.print("Bem-vindo\n");
+
+        System.out.print("Quantas posicoes vão ter na lista?: ");
+        numeroposicoes = input.nextInt();
+        vetor = new listaPonto[numeroposicoes];
 
         while (true) {
             System.out.println("----------------------\n");
@@ -50,9 +57,15 @@ public class colecaoElemento {
             switch (escolha) {
                 case 1:
                     System.out.println("Adicionar um elemento no final da coleção. ");
+                    System.out.println("Digite o x: ");
+                    x = input.nextInt();
+                    System.out.println("Digite o y: ");
+                    y = input.nextInt();
+                    p1 = new Ponto(x, y);
+                    vetor.adiciona_final(p1);
                     break;
                 case 2:
-                    System.out.println("Adicionar um elemento no final da coleção. ");
+                    System.out.println("Adicionar um elemento na posicao especifca da coleção. ");
                     break;
                 case 3:
                     System.out.println("Retornar o índice da primeira ocorrência de um elemento especificado na coleção.");

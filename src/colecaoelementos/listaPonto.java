@@ -26,13 +26,36 @@ public class listaPonto {
     }
 
     public void adiciona_posicao_especifica(Ponto p, int pos){
-        //implement
+        if (pos <= this.pontos.length){
+            this.validos ++;
+            //for (int i = 0; i < pos; i++) {
+            if (this.pontos[pos] == null){
+                this.pontos[pos] = p;
+            }
+            else{
+                for (int k = this.pontos.length; k > pos; k--){
+                    this.pontos[k] =  this.pontos[k+1];
+                }
+            }
+            this.pontos[pos] = p;
+            //}
+        }
+        else{
+            System.out.print("Posição inválida");
+        }
     }
 
     public int busca_ponto(Ponto p){
+        for (int i = 0; i < this.pontos.length; i++) {
+            if (this.pontos[i] == p) {
+                return 1;
+            }
+        }
         //implement
         return 0;
     }
+
+
 
     public void remove_ponto(int indice){
         for (int i = indice; i < this.pontos.length; i++){
