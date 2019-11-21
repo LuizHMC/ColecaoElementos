@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d1f68af-070f-41c5-83de-2520f2676cc7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/colecaoelementos/Ponto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/colecaoelementos/Ponto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/colecaoelementos/colecaoElemento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/colecaoelementos/colecaoElemento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/colecaoelementos/listaPonto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/colecaoelementos/listaPonto.java" afterDir="false" />
     </list>

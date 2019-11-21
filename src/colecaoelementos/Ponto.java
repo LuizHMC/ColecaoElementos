@@ -13,5 +13,12 @@ public class Ponto {
         double c2 = this.y-p.y;
         return Math.sqrt(c1*c1+c2*c2);
     }
+
+    public int getX() {
+        return x;
+    }
+    public int getY() {
+        return y;
+    }
 }
 
